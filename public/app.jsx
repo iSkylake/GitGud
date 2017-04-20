@@ -11,6 +11,15 @@ var Message = React.createClass({
 });
 
 var NameForm = React.createClass({
+	onClickSubmit: function(e){
+		e.preventDefault();
+		var name = this.refs.name.value;
+		if(name.length > 0){
+			this.refs.name.value = '';
+			this.props.onHandleMessage(name);
+		}
+	},
+
 	render: function(){
 		return(
 			<form onSubmit={this.onClickSubmit}>
@@ -28,12 +37,24 @@ var Main = React.createClass({
 		};
 	},
 
+	getInitialState: function(){
+		return{
+			message: this.props.message
+		};
+	},
+
+	handleMessage: function(name){
+		this.setState({
+			message: name + ' GITGUD!'
+		});
+	},
+
 	render: function(){
-		var message = this.props.message;
+		var message = this.state.message;
 		return(
 			<div>
 				<Message message={message}/>
-				<NameForm/>
+				<NameForm onHandleMessage={this.handleMessage}/>
 			</div>
 		);
 	}
