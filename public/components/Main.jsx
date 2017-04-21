@@ -1,8 +1,9 @@
 var React = require('react'),
-		Message = require('./Message'),
-		NameForm = require('./NameForm');
+		CreateReactClass = require('create-react-class'),
+		Message = require('Message'),
+		NameForm = require('NameForm');
 
-var Main = React.createClass({
+var Main = CreateReactClass({
 	getDefaultProps: function(){
 		return{
 			message: 'Hey traveler!',

@@ -1,6 +1,7 @@
-var React = require('react');
+var React = require('react'),
+		CreateReactClass = require('create-react-class');
 
-var Message = React.createClass({
+var Message = CreateReactClass({
 	render: function(){
 		var message = this.props.message;
 		var dvaURL = this.props.imgURL;

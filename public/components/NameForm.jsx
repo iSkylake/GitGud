@@ -1,6 +1,7 @@
-var React = require('react');
+var React = require('react'),
+		CreateReactClass = require('create-react-class');
 
-var NameForm = React.createClass({
+var NameForm = CreateReactClass({
 	onClickSubmit: function(e){
 		e.preventDefault();
 		var name = this.refs.name.value;

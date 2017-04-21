@@ -7,6 +7,11 @@ module.exports = {
 		filename: './public/bundle.js'
 	},
 	resolve: {
+		alias: {
+			Main: path.resolve(__dirname, './public/components/Main.jsx'),
+			Message: path.resolve(__dirname, './public/components/Message.jsx'),
+			NameForm: path.resolve(__dirname, './public/components/NameForm.jsx'),
+		},
 		extensions: ['*', '.js', '.jsx']
 	},
 	module: {
