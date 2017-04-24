@@ -1,10 +1,10 @@
-var React = require('react'),
-		CreateReactClass = require('create-react-class');
+const React = require('react');
+const CreateReactClass = require('create-react-class');
 
-var Message = CreateReactClass({
+const Message = CreateReactClass({
 	render: function(){
-		var message = this.props.message;
-		var dvaURL = this.props.imgURL;
+		let message = this.props.message;
+		let dvaURL = this.props.imgURL;
 		return(
 			<div>
 				<h1>{message}</h1>

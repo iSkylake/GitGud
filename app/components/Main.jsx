@@ -1,9 +1,9 @@
-var React = require('react'),
-		CreateReactClass = require('create-react-class'),
-		Message = require('Message'),
-		NameForm = require('NameForm');
+const React = require('react');
+const CreateReactClass = require('create-react-class');
+const Message = require('Message');
+const NameForm = require('NameForm');
 
-var Main = CreateReactClass({
+const Main = CreateReactClass({
 	getDefaultProps: function(){
 		return{
 			message: 'Hey traveler!',
@@ -26,8 +26,8 @@ var Main = CreateReactClass({
 	},
 
 	render: function(){
-		var message = this.state.message;
-		var imgURL = this.state.imgURL;
+		let message = this.state.message;
+		let imgURL = this.state.imgURL;
 		return(
 			<div>
 				<Message message={message} imgURL={imgURL}/>
