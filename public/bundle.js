@@ -240,6 +240,10 @@ process.off = noop;
 process.removeListener = noop;
 process.removeAllListeners = noop;
 process.emit = noop;
+process.prependListener = noop;
+process.prependOnceListener = noop;
+
+process.listeners = function (name) { return [] }
 
 process.binding = function (name) {
     throw new Error('process.binding is not supported');
@@ -9546,12 +9550,25 @@ module.exports = getIteratorFn;
 "use strict";
 
 
-var React = __webpack_require__(21),
-    CreateReactClass = __webpack_require__(33),
-    Message = __webpack_require__(85),
-    NameForm = __webpack_require__(86);
+var _react = __webpack_require__(21);
 
-var Main = CreateReactClass({
+var _react2 = _interopRequireDefault(_react);
+
+var _createReactClass = __webpack_require__(33);
+
+var _createReactClass2 = _interopRequireDefault(_createReactClass);
+
+var _Message = __webpack_require__(85);
+
+var _Message2 = _interopRequireDefault(_Message);
+
+var _NameForm = __webpack_require__(86);
+
+var _NameForm2 = _interopRequireDefault(_NameForm);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Main = (0, _createReactClass2.default)({
 	getDefaultProps: function getDefaultProps() {
 		return {
 			message: 'Hey traveler!',
@@ -9576,11 +9593,11 @@ var Main = CreateReactClass({
 	render: function render() {
 		var message = this.state.message;
 		var imgURL = this.state.imgURL;
-		return React.createElement(
+		return _react2.default.createElement(
 			'div',
 			null,
-			React.createElement(Message, { message: message, imgURL: imgURL }),
-			React.createElement(NameForm, { onHandleMessage: this.handleMessage })
+			_react2.default.createElement(_Message2.default, { message: message, imgURL: imgURL }),
+			_react2.default.createElement(_NameForm2.default, { onHandleMessage: this.handleMessage })
 		);
 	}
 });
@@ -9604,11 +9621,21 @@ module.exports = __webpack_require__(117);
 "use strict";
 
 
-var React = __webpack_require__(21),
-    ReactDOM = __webpack_require__(83),
-    Main = __webpack_require__(82);
+var _react = __webpack_require__(21);
 
-ReactDOM.render(React.createElement(Main, null), document.getElementById('app'));
+var _react2 = _interopRequireDefault(_react);
+
+var _reactDom = __webpack_require__(83);
+
+var _reactDom2 = _interopRequireDefault(_reactDom);
+
+var _Main = __webpack_require__(82);
+
+var _Main2 = _interopRequireDefault(_Main);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+_reactDom2.default.render(_react2.default.createElement(_Main2.default, null), document.getElementById('app'));
 
 /***/ }),
 /* 85 */
@@ -9617,25 +9644,31 @@ ReactDOM.render(React.createElement(Main, null), document.getElementById('app'))
 "use strict";
 
 
-var React = __webpack_require__(21),
-    CreateReactClass = __webpack_require__(33);
+var _react = __webpack_require__(21);
 
-var Message = CreateReactClass({
-	render: function render() {
-		var message = this.props.message;
-		var dvaURL = this.props.imgURL;
-		return React.createElement(
-			'div',
+var _react2 = _interopRequireDefault(_react);
+
+var _createReactClass = __webpack_require__(33);
+
+var _createReactClass2 = _interopRequireDefault(_createReactClass);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Message = function Message(_ref) {
+	var message = _ref.message,
+	    imgURL = _ref.imgURL;
+
+	return _react2.default.createElement(
+		'div',
+		null,
+		_react2.default.createElement(
+			'h1',
 			null,
-			React.createElement(
-				'h1',
-				null,
-				message
-			),
-			React.createElement('img', { src: dvaURL })
-		);
-	}
-});
+			message
+		),
+		_react2.default.createElement('img', { src: imgURL })
+	);
+};
 
 module.exports = Message;
 
@@ -9646,10 +9679,17 @@ module.exports = Message;
 "use strict";
 
 
-var React = __webpack_require__(21),
-    CreateReactClass = __webpack_require__(33);
+var _react = __webpack_require__(21);
 
-var NameForm = CreateReactClass({
+var _react2 = _interopRequireDefault(_react);
+
+var _createReactClass = __webpack_require__(33);
+
+var _createReactClass2 = _interopRequireDefault(_createReactClass);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var NameForm = (0, _createReactClass2.default)({
 	onClickSubmit: function onClickSubmit(e) {
 		e.preventDefault();
 		var name = this.refs.name.value;
@@ -9662,11 +9702,11 @@ var NameForm = CreateReactClass({
 	},
 
 	render: function render() {
-		return React.createElement(
+		return _react2.default.createElement(
 			'form',
 			{ onSubmit: this.onClickSubmit },
-			React.createElement('input', { type: 'text', ref: 'name', placeholder: 'Enter name' }),
-			React.createElement(
+			_react2.default.createElement('input', { type: 'text', ref: 'name', placeholder: 'Enter name' }),
+			_react2.default.createElement(
 				'button',
 				null,
 				'Submit'
