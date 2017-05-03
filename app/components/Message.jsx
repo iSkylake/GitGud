@@ -1,5 +1,5 @@
-const React = require('react');
-const CreateReactClass = require('create-react-class');
+import React from 'react';
+import CreateReactClass from 'create-react-class';
 
 const Message = CreateReactClass({
 	render: function(){

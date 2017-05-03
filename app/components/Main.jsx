@@ -1,7 +1,7 @@
-const React = require('react');
-const CreateReactClass = require('create-react-class');
-const Message = require('Message');
-const NameForm = require('NameForm');
+import React from 'react';
+import CreateReactClass from 'create-react-class';
+import Message from 'Message';
+import NameForm from 'NameForm';
 
 const Main = CreateReactClass({
 	getDefaultProps: function(){

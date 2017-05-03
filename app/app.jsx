@@ -1,6 +1,6 @@
-const React = require('react');
-const ReactDOM = require('react-dom');
-const Main = require('Main');
+import React from 'react';
+import ReactDOM form 'react-dom';
+import Main = from 'Main';
 
 ReactDOM.render(
 	<Main/>,
