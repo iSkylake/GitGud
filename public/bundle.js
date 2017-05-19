@@ -9550,6 +9550,10 @@ module.exports = getIteratorFn;
 "use strict";
 
 
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
 var _react = __webpack_require__(21);
 
 var _react2 = _interopRequireDefault(_react);
@@ -9602,7 +9606,7 @@ var Main = (0, _createReactClass2.default)({
 	}
 });
 
-module.exports = Main;
+exports.default = Main;
 
 /***/ }),
 /* 83 */
@@ -9644,6 +9648,10 @@ _reactDom2.default.render(_react2.default.createElement(_Main2.default, null), d
 "use strict";
 
 
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
 var _react = __webpack_require__(21);
 
 var _react2 = _interopRequireDefault(_react);
@@ -9670,7 +9678,7 @@ var Message = function Message(_ref) {
 	);
 };
 
-module.exports = Message;
+exports.default = Message;
 
 /***/ }),
 /* 86 */
@@ -9678,6 +9686,10 @@ module.exports = Message;
 
 "use strict";
 
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
 
 var _react = __webpack_require__(21);
 
@@ -9715,7 +9727,7 @@ var NameForm = (0, _createReactClass2.default)({
 	}
 });
 
-module.exports = NameForm;
+exports.default = NameForm;
 
 /***/ }),
 /* 87 */

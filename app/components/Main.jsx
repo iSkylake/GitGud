@@ -37,4 +37,4 @@ const Main = CreateReactClass({
 	}
 });
 
-module.exports = Main;
+export default Main;

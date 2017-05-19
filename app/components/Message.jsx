@@ -10,4 +10,4 @@ const Message = ({message, imgURL}) => {
 	);	
 }
 
-module.exports = Message;
+export default Message;

@@ -23,4 +23,4 @@ const NameForm = CreateReactClass({
 	}
 });
 
-module.exports = NameForm;
+export default NameForm;
